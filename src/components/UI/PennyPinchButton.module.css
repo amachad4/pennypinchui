@@ -1,0 +1,38 @@
+.pennypinch-button {
+  padding: 1rem 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font: inherit;
+  font-size: 1.5rem;
+}
+
+.pennypinch-button.primary {
+  border: none;
+  background: #a393eb;
+  color: #fff;
+  outline: 0.3rem solid rgba(164, 95, 190);
+  outline-offset: 0.2rem;
+}
+
+.pennypinch-button.danger{
+  border: none;
+  background: red;
+  color: #fff;
+  outline: 0.3rem solid #FFF;
+  outline-offset: 0.2rem;
+}
+
+.pennypinch-button:disabled,
+.pennypinch-button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.pennypinch-button:hover:enabled {
+  opacity: 0.7;
+  cursor: pointer;
+}
