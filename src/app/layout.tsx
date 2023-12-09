@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import Guard from '@/components/Guard';
 
 export const metadata: Metadata = {
-  title: "Penny Pinch",
-  description: "Control your life!",
+  title: 'Penny Pinch',
+  description: 'Control your life!',
 };
 
 export default function RootLayout({
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Guard>
+        <body>{children}</body>
+      </Guard>
     </html>
   );
 }

@@ -25,7 +25,7 @@ export default function Login() {
       </header>
       <div className={classes[`login-form`]}>
         <div className={classes[`lock-icon`]}>
-          <FaLock color="white" fontSize="3rem" />
+          <FaLock color="white" fontSize="1.85rem" />
         </div>
 
         <PennyPinchForm method="POST">
@@ -44,7 +44,7 @@ export default function Login() {
               Don't have an acount?&nbsp;<Link href="/register">Sign up!</Link>
             </p>
             <div>
-              <PennyPinchButton type="cancel" text="Cancel" />
+              <PennyPinchButton type="cancel" text="Cancel" href="/" />
               <PennyPinchButton type="submit" text="Log In" />
             </div>
           </div>

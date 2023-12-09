@@ -1,11 +1,8 @@
-.input {
+.pennypinch-input {
     font-family: inherit;
     font-size: 2rem;
     background-color: #FFF;
     border: 0.2rem solid #a393eb;;
     color: inherit;
-    height: 4.5rem;
     border-radius: 0.6rem;
-    width: 100%;
-    padding: 3rem;
 }

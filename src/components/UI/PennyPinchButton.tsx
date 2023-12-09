@@ -1,17 +1,28 @@
 import Link from "next/link";
 import classes from "./PennyPinchButton.module.css";
+import type { Url } from "next/dist/shared/lib/router/router";
 
-interface PennyPinchButtonProps {
+interface PennyPinchButtonMainProps {
   text: string;
-  type: "submit" | "cancel";
   disabled?: boolean;
+}
+
+interface PennyPinchButtonCancelProps {
+  type: "cancel";
+  href: Url;
+}
+
+interface PennyPinchButtonSubmitProps {
+  type: 'submit';
+  href?: never;
 }
 
 export default function PennyPinchButton({
   disabled,
   text,
   type,
-}: PennyPinchButtonProps) {
+  href
+}: PennyPinchButtonMainProps & (PennyPinchButtonCancelProps | PennyPinchButtonSubmitProps)) {
   if (type === "submit") {
     return (
       <button
@@ -24,7 +35,7 @@ export default function PennyPinchButton({
     );
   }
   return (
-    <Link href="/">
+    <Link href={href}>
       <button
         className={`${classes[`pennypinch-button`]} ${classes.danger}`}
         disabled={disabled}
