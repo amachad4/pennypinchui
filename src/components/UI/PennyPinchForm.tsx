@@ -3,7 +3,7 @@ import type { FormHTMLAttributes, ReactNode } from "react";
 interface PennyPinchFormProps {
   children: ReactNode;
   method?: "GET" | "POST" | "PATCH" | "DELETE";
-  action: string;
+  action?: string;
 }
 
 export default function PennyPinchForm({

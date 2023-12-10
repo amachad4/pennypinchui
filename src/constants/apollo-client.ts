@@ -5,7 +5,7 @@ import {
 } from "@apollo/experimental-nextjs-app-support/ssr";
 import { RestLink } from "apollo-link-rest";
 
-const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/`;
+const uri = `${process.env.API_URL}/api/`;
 
 const createRestLink = (token?: string) => {
   return new RestLink({
