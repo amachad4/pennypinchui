@@ -7,19 +7,19 @@ import { RestLink } from "apollo-link-rest";
 
 const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/`;
 
-const createRestLink = (token: string) => {
+const createRestLink = (token?: string) => {
   return new RestLink({
     uri,
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      "Content-Type": "application/json;charset=utf-8",
+      Accept: "application/json;charset=utf-8",
       ...(token && { Authorization: `Bearer ${token}` }),
     },
     credentials: "same-origin",
   });
 };
 
-export const client = (token: string) =>
+export const client = (token?: string) =>
   registerApolloClient(() => {
     return new NextSSRApolloClient({
       cache: new NextSSRInMemoryCache(),
